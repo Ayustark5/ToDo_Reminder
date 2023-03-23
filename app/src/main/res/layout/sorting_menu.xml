@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:paddingLeft="20dp"
+    android:paddingRight="20dp">
+
+    <RadioGroup
+        android:id="@+id/rbGroup"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:checkedButton="@id/rbDateAsc">
+
+        <RadioButton
+            android:id="@+id/rbDateAsc"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:text="@string/date_low_to_high"
+            android:textSize="18sp" />
+        <RadioButton
+            android:id="@+id/rbDateDec"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:text="@string/date_high_to_low"
+            android:textSize="18sp" />
+        <RadioButton
+            android:id="@+id/rbAlphaAsc"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:text="@string/alphabetical_a_to_z"
+            android:textSize="18sp" />
+        <RadioButton
+            android:id="@+id/rbAlphaDec"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:text="@string/alphabetical_z_to_a"
+            android:textSize="18sp" />
+    </RadioGroup>
+</LinearLayout>

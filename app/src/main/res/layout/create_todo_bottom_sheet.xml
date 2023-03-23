@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/containerBottomSheet"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/rounded_corners"
+    android:clickable="true"
+    android:focusable="true"
+    android:padding="8dp"
+    app:behavior_hideable="true"
+    app:behavior_peekHeight="0dp"
+    app:layout_behavior="com.google.android.material.bottomsheet.BottomSheetBehavior"
+    app:layout_constraintBottom_toBottomOf="parent">
+
+    <ImageView
+        android:id="@+id/pill"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        android:contentDescription="@string/bottom_sheet_holder_pill"
+        android:src="@drawable/ic_pill"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <TextView
+        android:id="@+id/tvTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        android:text="@string/bottom_sheet_title"
+        android:textAppearance="@style/TextAppearance.AppCompat.Subhead"
+        android:textColor="?attr/colorOnSurface"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/pill"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <TextView
+        android:id="@+id/tvRequired"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="@string/bottom_sheet_note"
+        android:textAppearance="@style/TextAppearance.AppCompat.Small"
+        app:layout_constraintEnd_toEndOf="@id/tvTitle"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@id/tvTitle"
+        app:layout_constraintTop_toBottomOf="@id/tvTitle" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/tilTitle"
+        style="@style/Widget.SignIN.TextInputLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="8dp"
+        android:layout_marginTop="12dp"
+        android:focusable="true"
+        app:boxStrokeColor="@color/black"
+        app:boxStrokeWidth="1dp"
+        app:hintEnabled="false"
+        app:layout_constraintTop_toBottomOf="@id/tvRequired"
+        app:startIconTint="@null">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/text_field_background_with_stroke"
+            android:focusable="true"
+            android:hint="@string/note_title"
+            android:inputType="text"
+            android:textColor="@color/text_color_black"
+            android:textColorHint="@color/text_color_hint" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/tilDesc"
+        style="@style/Widget.SignIN.TextInputLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="8dp"
+        android:layout_marginTop="12dp"
+        android:focusable="true"
+        app:boxStrokeColor="@color/black"
+        app:boxStrokeWidth="1dp"
+        app:hintEnabled="false"
+        app:layout_constraintTop_toBottomOf="@id/tilTitle"
+        app:startIconTint="@null">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/text_field_background_with_stroke"
+            android:focusable="true"
+            android:gravity="start|top"
+            android:hint="@string/note_description"
+            android:inputType="textMultiLine"
+            android:lines="2"
+            android:maxLines="10"
+            android:textColor="@color/text_color_black"
+            android:textColorHint="@color/text_color_hint" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/tilDue"
+        style="@style/Widget.SignIN.TextInputLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="8dp"
+        android:layout_marginTop="12dp"
+        android:focusable="false"
+        app:boxStrokeColor="@color/black"
+        app:boxStrokeWidth="1dp"
+        app:hintEnabled="false"
+        app:layout_constraintTop_toBottomOf="@id/tilDesc"
+        app:startIconDrawable="@drawable/ic_calendar">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/text_field_background_with_stroke"
+            android:cursorVisible="false"
+            android:focusable="false"
+            android:hint="@string/select_due_date"
+            android:inputType="none"
+            android:textColor="@color/text_color_black"
+            android:textColorHint="@color/text_color_hint" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnCreate"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/btn_ripple_bg"
+        android:elevation="10dp"
+        android:text="@string/create"
+        android:textColor="@color/white"
+        app:backgroundTint="@null"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@id/tilDue"
+        app:layout_constraintStart_toStartOf="@id/tilDue"
+        app:layout_constraintTop_toBottomOf="@id/tilDue" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnEdit"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/btn_ripple_bg"
+        android:elevation="10dp"
+        android:text="@string/edit"
+        android:textColor="@color/white"
+        android:visibility="gone"
+        app:backgroundTint="@null"
+        app:layout_constraintEnd_toEndOf="@id/tilDue"
+        app:layout_constraintStart_toStartOf="@id/tilDue"
+        app:layout_constraintTop_toBottomOf="@id/tilDue" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnRemove"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/btn_ripple_bg_red"
+        android:elevation="10dp"
+        android:text="@string/remove"
+        android:textColor="@color/white"
+        android:visibility="gone"
+        app:backgroundTint="@null"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@id/btnEdit"
+        app:layout_constraintStart_toStartOf="@id/btnEdit"
+        app:layout_constraintTop_toBottomOf="@id/btnEdit" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

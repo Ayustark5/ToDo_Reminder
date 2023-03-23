@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/blue_bg"
+    android:gravity="center"
+    android:orientation="vertical"
+    android:padding="15dp">
+
+    <ImageView
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:contentDescription="@string/app_name"
+        android:src="@drawable/ic_launcher_foreground" />
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="20dp"
+        android:layout_marginTop="10dp"
+        android:gravity="center"
+        android:text="@string/login"
+        android:textColor="@color/white"
+        android:textSize="36sp"
+        android:textStyle="bold" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/nameLayout"
+        style="@style/Widget.SignIN.TextInputLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="20dp"
+        android:layout_marginTop="35dp"
+        android:focusable="false"
+        android:nextFocusDown="@id/mobileLayout"
+        app:errorTextColor="@color/error_text_color"
+        app:hintEnabled="false"
+        app:startIconDrawable="@drawable/ic_person">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/text_field_background"
+            android:drawablePadding="3dp"
+            android:focusable="true"
+            android:hint="@string/enter_name"
+            android:inputType="textPersonName"
+            android:textColor="@color/black"
+            android:textColorHint="@color/text_color_hint" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/mobileLayout"
+        style="@style/Widget.SignIN.TextInputLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="20dp"
+        android:layout_marginTop="10dp"
+        android:focusable="false"
+        android:nextFocusDown="@null"
+        app:errorTextColor="@color/error_text_color"
+        app:hintEnabled="false"
+        app:startIconDrawable="@drawable/ic_phone">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/text_field_background"
+            android:drawablePadding="3dp"
+            android:focusable="true"
+            android:hint="@string/enter_mobile_number"
+            android:imeOptions="actionDone"
+            android:inputType="phone"
+            android:maxLength="10"
+            android:textColor="@color/black"
+            android:textColorHint="@color/text_color_hint" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/dobLayout"
+        style="@style/Widget.SignIN.TextInputLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="20dp"
+        android:layout_marginTop="10dp"
+        android:focusable="false"
+        app:errorTextColor="@color/error_text_color"
+        app:hintEnabled="false"
+        app:startIconDrawable="@drawable/ic_calendar">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/text_field_background"
+            android:cursorVisible="false"
+            android:focusable="false"
+            android:hint="@string/select_dob"
+            android:inputType="none"
+            android:textColor="@color/black"
+            android:textColorHint="@color/text_color_hint" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/btnLogin"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="40dp"
+        android:contentDescription="@string/btn_login"
+        android:focusable="false"
+        android:src="@drawable/ic_arrow_right"
+        app:backgroundTint="@color/themeBlue"
+        app:fabSize="normal"
+        app:maxImageSize="34dp"
+        app:tint="@color/white" />
+
+    <TextView
+        android:id="@+id/tvCheckApi"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="@string/check_api"
+        android:textColor="@color/white"
+        android:textSize="16sp" />
+
+
+    <!--
+            <com.github.ybq.android.spinkit.SpinKitView
+                android:id="@+id/spinKitLogin"
+                style="@style/SpinKitView.Large.ThreeBounce"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:visibility="gone"
+                app:SpinKit_Color="@color/floGreen" />
+    -->
+
+</LinearLayout>

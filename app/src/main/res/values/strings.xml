@@ -1,0 +1,30 @@
+<resources>
+    <string name="app_name"><u>Planning Simplifier</u></string>
+    <string name="login">Login</string>
+    <string name="enter_mobile_number">Enter Mobile Number</string>
+    <string name="btn_login">Btn Login</string>
+    <string name="enter_name">Enter First and Last Name</string>
+    <string name="dob_str">%1$d/%2$d/%3$d</string>
+    <string name="select_dob">Select DOB</string>
+    <string name="fab_content_desc">Add TODO</string>
+    <string name="edit_btn_content_desc">Button to Edit TODO</string>
+    <string name="create">Create</string>
+    <string name="remove">Remove</string>
+    <string name="edit">Edit</string>
+    <string name="more">More</string>
+    <string name="logout">Logout</string>
+    <string name="app_logo">App Logo</string>
+    <string name="dialog_close">Dialog Close</string>
+    <string name="app_logo_animation">App LOGO Animation</string>
+    <string name="bottom_sheet_holder_pill">Bottom Sheet Holder pill</string>
+    <string name="bottom_sheet_title">Create TODO Note</string>
+    <string name="bottom_sheet_note">All the fields are required</string>
+    <string name="note_title">Note Title</string>
+    <string name="note_description">Note Description</string>
+    <string name="select_due_date">Select Due Date</string>
+    <string name="date_low_to_high">Date (Low to High)</string>
+    <string name="date_high_to_low">Date (High to Low)</string>
+    <string name="alphabetical_a_to_z">Alphabetical(A to Z)</string>
+    <string name="alphabetical_z_to_a">Alphabetical(Z to A)</string>
+    <string name="check_api"><u>Check API</u></string>
+</resources>
